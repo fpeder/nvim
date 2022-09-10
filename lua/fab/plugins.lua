@@ -8,11 +8,12 @@ packer.startup(function(use)
     use "sainnhe/gruvbox-material"
     use "kyazdani42/nvim-web-devicons"
     use "neovim/nvim-lspconfig"
-    use "williamboman/nvim-lsp-installer"
-    use "williamboman/mason.nvim"
-    use "williamboman/mason-lspconfig.nvim"
+    --use "williamboman/nvim-lsp-installer"
+    --use "williamboman/mason.nvim"
+    --use "williamboman/mason-lspconfig.nvim"
     use "onsails/lspkind.nvim"
     use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
+    use "nvim-treesitter/nvim-treesitter-refactor"
     use "nvim-lua/plenary.nvim"
     use "hrsh7th/cmp-nvim-lsp"
     use "hrsh7th/cmp-buffer"
@@ -31,15 +32,19 @@ packer.startup(function(use)
     use {"goolord/alpha-nvim",
         requries = { 'kyazdani42/nvim-web-devicons' },
         config = function()
-            require("alpha").setup(require("alpha.themes.startify").config)
+            require("alpha").setup(require("alpha.themes.dashboard").config)
         end
     }
-    use {"j-hui/fidget.nvim", 
-        config = function() 
-            require("fidget").setup() 
-        end
-    }
+    use {"j-hui/fidget.nvim"}
     use {"kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async"}
     use {"yioneko/nvim-yati", requires = "nvim-treesitter/nvim-treesitter"}
-    -- use {"romgrk/barbar.nvim", requires = "kyazdani42/nvim-web-devicons"}
+    use {"ray-x/navigator.lua", 
+        requires = {
+            {"ray-x/guihua.lua", run = "cd lua/fzy && make"},
+        }
+    }
+    use {"ray-x/lsp_signature.nvim"}
+    use {"akinsho/toggleterm.nvim", tag = "*"}
+    use {"kyazdani42/nvim-tree.lua", tag = "nightly"}
+    use {"lukas-reineke/indent-blankline.nvim"}
 end)
