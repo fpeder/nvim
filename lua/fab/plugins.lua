@@ -9,7 +9,7 @@ packer.startup(function(use)
     use "kyazdani42/nvim-web-devicons"
     use "neovim/nvim-lspconfig"
     --use "williamboman/nvim-lsp-installer"
-    --use "williamboman/mason.nvim"
+    use "williamboman/mason.nvim"
     --use "williamboman/mason-lspconfig.nvim"
     use "onsails/lspkind.nvim"
     use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}

@@ -4,4 +4,5 @@ if not status then return end
 navigator.setup({
     debug=true,
     ts_fold = true,
+    mason=true,
 })

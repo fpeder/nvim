@@ -140,6 +140,11 @@ _G.packer_plugins = {
     path = "/home/fabrizio/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/home/fabrizio/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
   ["navigator.lua"] = {
     loaded = true,
     path = "/home/fabrizio/.local/share/nvim/site/pack/packer/start/navigator.lua",
